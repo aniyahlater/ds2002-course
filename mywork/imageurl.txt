@@ -1,0 +1,13 @@
+#!/bin/bash
+#creating a bucket name 'ds2002-ybf3jw'
+#aws s3 mb s3://ds2002-ybf3jw
+# prompting the user for an url
+read -p 'Please give me a URL to an image: ' link
+curl $link > image.png
+#uploading the file to the bucket
+aws s3 cp image.png s3://ds2002-ybf3jw/
+#creating url
+#https://s3.amazonaws.com/ds2002-ybf3jw/image
+aws s3 presign --expires-in 604800 s3://ds2002-ybf3jw/image.png
+
+https://ds2002-ybf3jw.s3.us-east-1.amazonaws.com/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIA2UC3DLAFZCIX7EGX%2F20240314%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240314T230510Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Security-Token=FwoGZXIvYXdzEIj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDKKzfBKLp53s6We%2B3CLEAbziqYxG1SaCE0P9PEZPBMzr9MkhLLYCKY72cdveylUD%2B1u73aHvSPDa6epa8ujoIcHvtyyFoMvDjp8nOsxsgA4Yxn%2BxR3k151AdkpboElvrZAMGeVuXhxztWsBILH2nD0H%2B2UL1hYujrk6KJYYUSudJh9k9LWSB%2BktTLV8FJOZpzAxw6nEAT3gMHxQcICYEhni0lS9qg748TryCwMarhacQX6VIamXf3CPcoIf34ppxSOcVm0F%2FVNF71nwfrxLRTKpHiJsoj4TOrwYyLSetwIfUtPJtRwjNP6m0R2sKv37%2BmGEFMnEVfH4ZzSFoHTZlJBfC4e8mCLY0EQ%3D%3D&X-Amz-Signature=696b542880fea9bda92741bc3ed3ad8f6011b0c6e0d1534bdd2cc741024e6849
