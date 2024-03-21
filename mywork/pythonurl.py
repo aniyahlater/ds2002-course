@@ -27,6 +27,9 @@ def presignedurl(bucket_name, object_name, expires_in=604800):
 
 print(presignedurl(bucket_name,'legendOfZelda.jpg',expires_in))
 
+https://ds2002-ybf3jw.s3.amazonaws.com/legendOfZelda.jpg?AWSAccessKeyId=ASIA2UC3DLAF4UQ5VCBY&Signature=KC77yWjElAPlcbW97chDUP4SGF0%3D&x-amz-security-token=FwoGZXIvYXdzEBsaDKVzpOr4v3EBaoeQsyLEAazyj%2FZxztmBCqt5ycRHgDF%2FzUXonJgConTs%2F62rqz0iv0PhvThcbILARgH9tcyPhVxXUw4WDABlk0ITuMLNuK9Xf6t3Eig40suh9m5fDuYYeLhfz3vIZe7upAgfdjMmGLTwkIPAsIGevY9XO3SSw8UWIJgMs1gUufE2YKUqlaaDosviocT2llJwo5EDklN74dEDWA8bBOPNQFb9qQObpifhEVJe6YHw8HzDMqRUfoFyUeFyZp7NxZJOc37dCoKeIRcntooovaHurwYyLegkBJHtmSsHGVfzwUSP%2BYGbP6wlrP83fua23UG%2FBabnQ8WCKugolHg%2Bedb8Lg%3D%3D&Expires=1711591207
+
+
 
 
 
